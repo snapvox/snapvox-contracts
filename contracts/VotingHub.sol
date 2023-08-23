@@ -138,7 +138,7 @@ contract VotingHubV1 is AccessManager {
      * @param _uniqueHash - Proposal unique hash used to identify proposal in the voting dapp backend
      * @return uint - proposal id
      **/
-    function propose(string memory _description, uint256 _opens, uint256 _closes, uint256 _votingToll, uint256 _passingPerc, string memory _uniqueHash) public notContract returns (uint) {
+    function propose(string memory _description, uint256 _opens, uint256 _closes, uint256 _votingToll, uint256 _passingPerc, string memory _uniqueHash) public notContract onlyAuthorized returns (uint) {
         
         uint latestProposalId = latestProposalIds[msg.sender];
         if (latestProposalId != 0) {

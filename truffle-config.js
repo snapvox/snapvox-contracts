@@ -89,7 +89,7 @@ module.exports = {
       provider: () => new HDWalletProvider(
         process.env.MNEMONIC,
         'https://erpc.xinfin.network'),
-      network_id: 51,
+      network_id: 50,
       gas: 5500000,
       confirmation: 2,
       timeoutBlocks: 800,
